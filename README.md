@@ -1,6 +1,7 @@
-# nuxt-test
+# nuxt-demo
 
-> My exceptional Nuxt.js project
+> Nuxt.js project
+> 持续更新nuxt相关测试代码
 
 ## Build Setup
 
