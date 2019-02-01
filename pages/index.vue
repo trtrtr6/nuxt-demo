@@ -5,7 +5,7 @@
       <nuxt-link to="test?title=hello">test?title=hello</nuxt-link>
       <logo />
       <h1 class="title">
-        nuxt-test
+        nuxt-demo
       </h1>
       <h2 class="subtitle">
         My exceptional Nuxt.js project
