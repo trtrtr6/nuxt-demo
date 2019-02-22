@@ -42,6 +42,8 @@ module.exports = {
   ** Nuxt.js modules
   */
   modules: [
+    '@nuxtjs/axios',
+    '@nuxtjs/proxy'
   ],
 
   /*
@@ -56,5 +58,14 @@ module.exports = {
     extend(config, ctx) {
       
     }
-  }
+  },
+  proxy: [
+    [
+      '/api', 
+      { 
+        target: 'http://localhost:3000', // api主机
+        pathRewrite: { '^/api' : '/' }
+      }
+    ]
+  ]
 }

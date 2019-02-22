@@ -11,13 +11,14 @@
 </template>
 
 <script>
-
+import axios from 'axios'
 export default {
-  asyncData (context) {
+  async asyncData (context) {
     const query = context.query 
-    
-    console.log(context)
-    console.log(query)
+    // console.log(context)
+    // console.log(query)
+    const r = await axios.get(`/api/json`)
+    console.log(r)
     return {
       test:query.title
     }
