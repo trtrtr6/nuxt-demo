@@ -6,6 +6,7 @@
       <nuxt-link to="test?title=ceshi">test?title=ceshi</nuxt-link>
       <button @click="navto">编程式导航到首页</button>
       <button @click="btn1">测试</button>
+      <div>{{json}}</div>
     </div>
   </section>
 </template>
@@ -18,9 +19,9 @@ export default {
     // console.log(context)
     // console.log(query)
     const r = await axios.get(`/api/json`)
-    console.log(r)
     return {
-      test:query.title
+      test:query.title,
+      json:r.data
     }
   },
   data(){
