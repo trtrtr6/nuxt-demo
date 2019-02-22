@@ -12,13 +12,14 @@
 </template>
 
 <script>
-import axios from 'axios'
+//好像可以直接使用nuxt的axios插件，已经绑定到app实例上了
+// import axios from '@/plugins/axios'
 export default {
   async asyncData (context) {
-    const query = context.query 
-    // console.log(context)
-    // console.log(query)
-    const r = await axios.get(`/api/json`)
+    const query = context.query
+    const app = context.app
+    console.log(query)
+    const r = await app.$axios.get(`/api/json`)
     return {
       test:query.title,
       json:r.data

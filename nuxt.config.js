@@ -67,5 +67,13 @@ module.exports = {
         pathRewrite: { '^/api' : '/' }
       }
     ]
-  ]
+  ],
+  env: {
+    baseUrl: process.env.BASE_URL || 'http://localhost:3333'
+  },
+  axios: {
+    baseURL: 'http://localhost:3333',
+    credentials: false,
+    proxyHeaders: false
+  }
 }
